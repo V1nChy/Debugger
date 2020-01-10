@@ -1,4 +1,6 @@
-﻿using System;
+﻿/*copy from .net by topameng*/
+
+using System;
 using System.Reflection;
 using System.Text;
 
