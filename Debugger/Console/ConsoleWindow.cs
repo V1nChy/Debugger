@@ -24,7 +24,7 @@ namespace GFW
                 IntPtr stdHandle = GetStdHandle(STD_OUTPUT_HANDLE);
                 Microsoft.Win32.SafeHandles.SafeFileHandle safeFileHandle = new Microsoft.Win32.SafeHandles.SafeFileHandle(stdHandle, true);
                 FileStream fileStream = new FileStream(safeFileHandle, FileAccess.Write);
-                System.Text.Encoding encoding = System.Text.Encoding.GetEncoding(936);
+                System.Text.Encoding encoding = System.Text.Encoding.ASCII;
                 StreamWriter standardOutput = new StreamWriter(fileStream, encoding);
                 standardOutput.AutoFlush = true;
                 Console.SetOut(standardOutput);
